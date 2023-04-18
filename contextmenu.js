@@ -67,7 +67,12 @@ function ContextMenu(menu, options){
 
 		level.forEach(function(item){
 			var li = document.createElement("li");
+			
+			if (ContextUtil.getProperty(item, "liclass", "") != "") { 
+				li.classList.add(ContextUtil.getProperty(item, "liclass", ""));
+			}
 			li.menu = self;
+			
 
 			if(typeof item.type === "undefined"){
 				var icon_span = document.createElement("span");
