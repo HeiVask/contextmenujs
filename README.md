@@ -34,6 +34,7 @@ ContextmenuJS is a simple JavaScript library, to display custom contextmenus (ri
 ```javascript
 var menuitems = [
   {
+    "liclass": "",
     "text": "Item 1",
     "icon": "&#9819;",
     "sub": [
