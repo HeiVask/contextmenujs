@@ -192,8 +192,11 @@ function ContextMenu(menu, options){
 	}
 
 	this.hide = function(){
-		document.getElementById('cm_' + num).classList.remove("display");
-		window.removeEventListener("click", documentClick);
+		var target = document.getElementById('cm_' + num);
+		if (target){
+			document.getElementById('cm_' + num).classList.remove("display");
+			window.removeEventListener("click", documentClick);
+		}
 	}
 
 	function documentClick(){
